@@ -15,6 +15,8 @@ def poker_hands(cards)
     "Flush"
   elsif numbers.each_cons(4).all? { |x,y| y == x+1 }
     "Straight"
+  elsif numbers[0] == numbers[2] || numbers[2] == numbers[4]
+    "Three of a Kind"
   end
 end
 puts poker_hands(["13H", "12H", "10D", "14S", "11C"])

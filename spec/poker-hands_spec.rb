@@ -38,6 +38,13 @@ describe('poker_hands') do
     poker_hands(["13H", "12H", "10D", "14S", "11C"]).should(eq("Straight"))
   end
 
+    it('should take an array of cards and check for "Three of a Kind"') do
+    poker_hands(["13H", "13D", "13S", "2S", "5C"]).should(eq("Three of a Kind"))
+  end
+
+    it('should take an array of cards and check for "Three of a Kind"') do
+    poker_hands(["2S", "5C", "13H", "13D", "13S"]).should(eq("Three of a Kind"))
+  end
 end
 
 
