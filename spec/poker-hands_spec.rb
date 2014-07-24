@@ -9,7 +9,13 @@ describe('poker_hands') do
   it('should take a sorted array of cards and check to see if a "Royal Flush" is present') do
     poker_hands(["14C", "13C", "12C", "11C", "10C"]).should(eq("Royal Flush"))
   end
+
+   it('should take a sorted array of cards and check to see if a "Straight Flush" is present') do
+    poker_hands(["13C", "12C", "11C", "10C", "9C"]).should(eq("Straight Flush"))
+  end
 end
+
+
 
 # describe :roman_numerals do
 #   it 'returns roman numeral value for 1, 2 and 3' do

@@ -3,8 +3,10 @@ def poker_hands(cards)
   numbers = cards.map { |card| card.chop.to_i }
   suits = []
   cards.each { |card| suits << card[-1] }
-  if suits.all? { |suit| suit == suits[0]} && numbers.each_cons(2).all? { |x,y| y == x+1 }
+  if suits.all? { |suit| suit == suits[0]} && numbers.each_cons(2).all? { |x,y| y == x+1 } && numbers[-1] == 14
     "Royal Flush"
+  elsif suits.all? { |suit| suit == suits[0]} && numbers.sort.each_cons(2).all? { |x,y| y == x+1 }
+    "Straight Flush"
   end
 end
 
