@@ -45,6 +45,10 @@ describe('poker_hands') do
     it('should take an array of cards and check for "Three of a Kind"') do
     poker_hands(["2S", "5C", "13H", "13D", "13S"]).should(eq("Three of a Kind"))
   end
+
+    it('should take an array of cards and check for "Two Pair"') do
+    poker_hands(["12S", "12C", "13H", "6D", "13S"]).should(eq("Two Pair"))
+  end
 end
 
 
