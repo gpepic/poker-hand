@@ -13,6 +13,14 @@ describe('poker_hands') do
    it('should take a sorted array of cards and check to see if a "Straight Flush" is present') do
     poker_hands(["13C", "12C", "11C", "10C", "9C"]).should(eq("Straight Flush"))
   end
+
+    it('should take an array of cards and check for "4 of a Kind"') do
+    poker_hands(["6C", "6D", "6H", "6S", "14C"]).should(eq("Four of a Kind"))
+  end
+
+    it('should take an array of cards and check for "4 of a Kind"') do
+    poker_hands(["3C", "6D", "6H", "6S", "6C"]).should(eq("Four of a Kind"))
+  end
 end
 
 

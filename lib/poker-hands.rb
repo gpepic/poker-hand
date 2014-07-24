@@ -7,6 +7,8 @@ def poker_hands(cards)
     "Royal Flush"
   elsif suits.all? { |suit| suit == suits[0]} && numbers.sort.each_cons(2).all? { |x,y| y == x+1 }
     "Straight Flush"
+  elsif numbers.sort.all? {|v,w,x,y,z| v == w && w == x && x == y || w == x && x == y && y == z }
+    "Four of a Kind"
   end
 end
 
