@@ -1,20 +1,20 @@
 def poker_hands(cards)
   cards = cards.sort
-  numbers = cards.map { |card| card.chop.to_i }
+  numbers = cards.map { |card| card.chop.to_i }.sort
   suits = []
   cards.each { |card| suits << card[-1] }
   if suits.all? { |suit| suit == suits[0]} && numbers.each_cons(2).all? { |x,y| y == x+1 } && numbers[-1] == 14
     "Royal Flush"
-  elsif suits.all? { |suit| suit == suits[0]} && numbers.sort.each_cons(2).all? { |x,y| y == x+1 }
+  elsif suits.all? { |suit| suit == suits[0]} && numbers.each_cons(2).all? { |x,y| y == x+1 }
     "Straight Flush"
-  elsif numbers.sort.all? {|v,w,x,y,z| v == w && w == x && x == y || w == x && x == y && y == z }
+  elsif numbers[0] == numbers[3] || numbers[1] == numbers[4]
     "Four of a Kind"
-  elsif elsif numbers.sort.all? {|v,w,x,y,z| v == w && w == x && y == z || v == w && x == y && y == z }
+  elsif numbers[0] == numbers[2] && numbers[3] == numbers[4] || numbers[0] == numbers[1] && numbers[2] == numbers[4]
     "Full House"
 
   end
 end
-
+#puts poker_hands(["4C", "4D", "12H", "12S", "12C"])
 #split array elements into seperate numbers and letters
 #assign these pairs into key/value hashes in an object
 #sort the object by key value
