@@ -29,6 +29,10 @@ describe('poker_hands') do
     it('should take an array of cards and check for "Full House"') do
     poker_hands(["4C", "4D", "12H", "12S", "12C"]).should(eq("Full House"))
   end
+
+    it('should take an array of cards and check for "Flush"') do
+    poker_hands(["4C", "7C", "12C", "2C", "10C"]).should(eq("Flush"))
+  end
 end
 
 
