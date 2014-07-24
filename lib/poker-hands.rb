@@ -13,9 +13,11 @@ def poker_hands(cards)
     "Full House"
   elsif suits.all? { |suit| suit == suits[0]}
     "Flush"
+  elsif numbers.each_cons(4).all? { |x,y| y == x+1 }
+    "Straight"
   end
 end
-puts poker_hands(["4C", "7C", "12C", "2C", "10C"])
+puts poker_hands(["13H", "12H", "10D", "14S", "11C"])
 #split array elements into seperate numbers and letters
 #assign these pairs into key/value hashes in an object
 #sort the object by key value
