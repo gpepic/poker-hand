@@ -9,6 +9,9 @@ def poker_hands(cards)
     "Straight Flush"
   elsif numbers.sort.all? {|v,w,x,y,z| v == w && w == x && x == y || w == x && x == y && y == z }
     "Four of a Kind"
+  elsif elsif numbers.sort.all? {|v,w,x,y,z| v == w && w == x && y == z || v == w && x == y && y == z }
+    "Full House"
+
   end
 end
 
