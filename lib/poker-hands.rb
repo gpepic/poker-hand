@@ -21,9 +21,11 @@ def poker_hands(cards)
     "Two Pair"
   elsif numbers[0] == numbers[1] || numbers[1] == numbers[2] || numbers[2] == numbers[3] || numbers[3] == numbers[4]
     "One Pair"
+  else
+    "High Card"
   end
 end
-puts poker_hands(["12S", "12C", "7H", "6D", "13S"])
+puts poker_hands(["12S", "10C", "7H", "6D", "13S"])
 #split array elements into seperate numbers and letters
 #assign these pairs into key/value hashes in an object
 #sort the object by key value

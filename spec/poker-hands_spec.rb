@@ -54,6 +54,10 @@ describe('poker_hands') do
     poker_hands(["12S", "12C", "7H", "6D", "13S"]).should(eq("One Pair"))
   end
 
+    it('should take an array of cards and check for "High Card"') do
+    poker_hands(["12S", "10C", "7H", "6D", "13S"]).should(eq("High Card"))
+  end
+
 end
 
 
