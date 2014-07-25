@@ -1,5 +1,5 @@
 require('rspec')
-require('poker-hands')
+require('jas_poker')
 
 describe('poker_hands') do
   # it('should take a sorted array of cards and check to see if a pair are present') do
