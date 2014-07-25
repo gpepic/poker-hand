@@ -17,12 +17,14 @@ This program will take an array of cards and return the proper poker hand.
 ###Directions:
 To use this program, Ruby must be installed on your system.  From the command line, install the gem as follows:
 
-```gem install ./jas_poker-1.1.0.gem
+```ruby
+gem install ./jas_poker-1.1.0.gem
 ```
 
 Then enter Ruby through `irb` and run the code below, where the information contained in `[ ]` represents the cards in your hand:
 
-```require Poker.poker_hands(["13C", "12C", "11C", "10C", "9C"])
+```ruby
+require Poker.poker_hands(["13C", "12C", "11C", "10C", "9C"])
 ```
 
 Hit enter and the program will return your best hand from the cards.
