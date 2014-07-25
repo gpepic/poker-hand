@@ -58,13 +58,9 @@ describe('poker_hands') do
     poker_hands(["12S", "10C", "7H", "6D", "13S"]).should(eq("High Card"))
   end
 
+    it('should take an array of cards and upcase the entire array so that users may enter upper or lower case to the program') do
+    poker_hands(["12s", "10C", "7h", "6d", "13S"]).should(eq("High Card"))
+  end
 end
-
-
-
-# describe :roman_numerals do
-#   it 'returns roman numeral value for 1, 2 and 3' do
-#     expect(roman_numerals(3)).to eq('III')
-#   end
 
 

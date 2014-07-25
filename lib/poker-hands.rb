@@ -1,5 +1,5 @@
 def poker_hands(cards)
-  cards = cards.sort
+  cards = cards.sort.map(&:upcase)
   numbers = cards.map { |card| card.chop.to_i }.sort
   suits = []
   cards.each { |card| suits << card[-1] }
@@ -25,16 +25,3 @@ def poker_hands(cards)
     "High Card"
   end
 end
-puts poker_hands(["12S", "10C", "7H", "6D", "13S"])
-#split array elements into seperate numbers and letters
-#assign these pairs into key/value hashes in an object
-#sort the object by key value
-#place sorted key/value pairs back into an array
-#join numbers and letters again
-
-
-# 0.upto(3) do |i|
-  #   puts cards[i].chop
-    # if
-    # elsif cards[i].chop == cards[i+1].chop
-    #   return "pair"
